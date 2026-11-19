@@ -47,18 +47,18 @@ source = { editable = "." }
 dependencies = [
     { name = "aio-pika" },
     { name = "gpiozero" },
-    { name = "lgpio" },
+    { name = "lgpio", marker = "sys_platform == 'linux'" },
     { name = "reactivex" },
-    { name = "spidev" },
+    { name = "spidev", marker = "sys_platform == 'linux'" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "aio-pika", specifier = ">=10.2.2" },
     { name = "gpiozero", specifier = ">=2.0.1.post3" },
-    { name = "lgpio", specifier = ">=0.2.2.0" },
+    { name = "lgpio", marker = "sys_platform == 'linux'", specifier = ">=0.2.2.0" },
     { name = "reactivex", specifier = ">=6.1.0" },
-    { name = "spidev", specifier = ">=3.8" },
+    { name = "spidev", marker = "sys_platform == 'linux'", specifier = ">=3.8" },
 ]
 
 [[package]]
